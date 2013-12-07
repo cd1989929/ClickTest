@@ -1,88 +1,109 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
-      xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <style>
-            .animate-switch-container {
-                position:relative;
-                background:white;
-                border:1px solid black;
-                height:40px;
-            overflow:hidden;
-                }
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <style>
+        .animate-switch-container {
+            position: relative;
+            background: white;
+            border: 1px solid black;
+            height: 40px;
+            overflow: hidden;
+        }
 
-            .animate-switch {
-                padding:10px;
-            }
+        .animate-switch {
+            padding: 10px;
+        }
 
-            .animate-switch.ng-animate {
-                -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-                transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+        .animate-switch.ng-animate {
+            -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+            transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
 
-                position:absolute;
-                top:0;
-                left:0;
-                right:0;
-                bottom:0;
-            }
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
 
-            .animate-switch.ng-leave.ng-leave-active,
-            .animate-switch.ng-enter {
-                top:-50px;
-            }
-            .animate-switch.ng-leave,
-            .animate-switch.ng-enter.ng-enter-active {
-                top:0;
-            }
-        </style>
+        .animate-switch.ng-leave.ng-leave-active,
+        .animate-switch.ng-enter {
+            top: -50px;
+        }
 
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        .animate-switch.ng-leave,
+        .animate-switch.ng-enter.ng-enter-active {
+            top: 0;
+        }
+    </style>
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 click.</p>
-    <!--<div ng-controller="Ctrl">-->
-        <!--<select ng-model="selection" ng-options="item for item in items"></select>-->
-        <!--<tt>selection={{selection}}</tt>-->
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 
-        <!--<div class="animate-switch-container" ng-swich on="selection" >-->
-            <!--<div class="animate-switch" ng-swich-when="李昂">李昂</div>-->
-            <!--<div class="animate-switch" ng-swich-when="陈栋">陈栋</div>-->
-            <!--<div class="animate-switch" ng-swich-default>SB</div>-->
-        <!--</div>-->
-        <!--<div>-->
+<!-- Add your site or application content here -->
+<p>Hello world! This is HTML5 click.</p>
+<!--<div ng-controller="Ctrl">-->
+<!--<select ng-model="selection" ng-options="item for item in items"></select>-->
+<!--<tt>selection={{selection}}</tt>-->
 
-        <!--</div>-->
-        <!--<input type="text" ng-model="youname"></br>-->
-        <!--Hello,{{youname}}!</br>-->
+<!--<div class="animate-switch-container" ng-swich on="selection" >-->
+<!--<div class="animate-switch" ng-swich-when="李昂">李昂</div>-->
+<!--<div class="animate-switch" ng-swich-when="陈栋">陈栋</div>-->
+<!--<div class="animate-switch" ng-swich-default>SB</div>-->
+<!--</div>-->
+<!--<div>-->
+
+<!--</div>-->
+<!--<input type="text" ng-model="youname"></br>-->
+<!--Hello,{{youname}}!</br>-->
 
 </div>
 <div ng-controller="MyController" ng-app="myApp">
     {{person.name}}</br>
     {{name}}
+
+    <div ng-controller="ParentController">
+        <div ng-controller="ChildController">
+            <input type="text" ng-model="person.name" placeholder="Name"/>
+            </br>
+            <input type="text" ng-model="person.age" placeholder="age"/>
+            </br>
+            <a ng-click="sayHello()">say Hello</a>
+        </div>
+        {{person}}
+    </div>
+    <div ng-controller="PlayerController">
+        <button ng-click="play()" class="button" ng-show="!playing">play</button>
+        <button ng-click="stop()" class="button alert" ng-show="playing">stop</button>
+    </div>
+    <div ng-controller="MyController">
+        <h5>{{ clock }}</h5>
+    </div>
 </div>
+
 <script src="js/vendor/angular/angular.js"></script>
 <script src="js/main.js"></script>
-<script>
-
-</script>
 </body>
 </html>

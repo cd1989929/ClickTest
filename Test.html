@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<div ng-controller="ClickChange" ng-app="myTestApp">
+   <div>
+        <!--<input type="button" ng-model="" ng-click="change(1)"/>-->
+        <!--<input type="button" ng-model="" ng-click="change(2)"/>-->
+        <!--<input type="button" ng-model="" ng-click="change(3)"/>-->
+       <ul>
+           <li ng-repeat="item in items">
+               <a href ng-click="change(item)">{{item}}</a>
+           </li>
+       </ul>
+
+    </div>
+    <div ng-switch on="cd">
+        <div  ng-switch-when="1">
+            i am human
+        </div>
+        <div  ng-switch-when="2">
+            i am ddd
+        </div>
+        <div ng-switch-when="3">
+            i am asdasdsafdafda
+        </div>
+    </div>
+
+</div>
+<script src="js/vendor/angular/angular.js"></script>
+<script src="js/Test.js"></script>
+</body>
+</html>
